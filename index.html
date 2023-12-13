@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ITEM MANAGMENT SYSTEM</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="crude">
+			<div class="head">
+				<h2>CRUD</h2>
+				<p>PRODUCT MANAGMENT SYSTEM</p>
+			</div>
+
+			<div class="inputs">
+				<input type="text" id="title" placeholder="title" />
+				<div class="price">
+					<input type="number" id="price" placeholder="price" />
+					<input type="number" id="taxes" placeholder="taxes" />
+					<input type="number" id="ads" placeholder="ads" />
+					<input type="number" id="discount" placeholder="discount" />
+					<small id="total"></small>
+				</div>
+				<input type="number" placeholder="count" id="count" />
+				<input type="text" placeholder="category" id="category" />
+				<button id="submit">Create</button>
+			</div>
+
+			<div class="outputs">
+				<div class="searchBlock">
+					<input onkeyup="searchData(this.value)" type="text" id="search" placeholder="search" />
+					<div class="btnSearch">
+						<button onclick="getSearchMood(this.id)" id="searchTitle">Search By Title</button>
+						<button onclick="getSearchMood(this.id)" id="searchCategory">Search By Category</button>
+					</div>
+				</div>
+				<div id="deleteAll"></div>
+				<div id="tableWrapper">
+					<table>
+						<div>
+							<thead>
+								<tr id="headTr">
+									<th>id</th>
+									<th>title</th>
+									<th>price</th>
+									<th>taxes</th>
+									<th>ads</th>
+									<th>discount</th>
+									<th>Total</th>
+									<th>category</th>
+									<th>update</th>
+									<th>delete</th>
+								</tr>
+							</thead>
+							<tbody id="tbody"></tbody>
+						</div>
+					</table>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
